@@ -1,4 +1,6 @@
-<?php namespace Vinelab\NeoEloquent\Schema;
+<?php 
+
+namespace Megachill\NeoEloquent\Schema;
 
 use Closure;
 use Illuminate\Database\ConnectionInterface;

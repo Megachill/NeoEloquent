@@ -1,8 +1,10 @@
-<?php namespace Vinelab\NeoEloquent\Eloquent\Edges;
+<?php 
 
-use Vinelab\NeoEloquent\Eloquent\Model;
-use Vinelab\NeoEloquent\Eloquent\Builder;
-use Vinelab\NeoEloquent\Eloquent\Edges\Relation;
+namespace Megachill\NeoEloquent\Eloquent\Edges;
+
+use Megachill\NeoEloquent\Eloquent\Model;
+use Megachill\NeoEloquent\Eloquent\Builder;
+use Megachill\NeoEloquent\Eloquent\Edges\Relation;
 
 class HyperEdge extends Relation {
 
@@ -12,7 +14,7 @@ class HyperEdge extends Relation {
      * The morph Model instance
      * representing the 3rd Node of the relationship.
      *
-     * @var \Vinelab\NeoEloquent\Eloquent\Model
+     * @var \Megachill\NeoEloquent\Eloquent\Model
      */
     protected $morph;
 
@@ -27,14 +29,14 @@ class HyperEdge extends Relation {
     /**
      * The left side Edge of the relationship.
      *
-     * @var \Vinelab\NeoEloquent\Eloquent\Edges\EdgeOut
+     * @var \Megachill\NeoEloquent\Eloquent\Edges\EdgeOut
      */
     protected $left;
 
     /**
      * The right side Edge of the relationship.
      *
-     * @var \Vinelab\NeoEloquent\Eloquent\Edges\EdgeOut
+     * @var \Megachill\NeoEloquent\Eloquent\Edges\EdgeOut
      */
     protected $right;
 
@@ -48,12 +50,12 @@ class HyperEdge extends Relation {
     /**
      * Create a new HyperEdge instance.
      *
-     * @param Vinelab\NeoEloquent\Eloquent\Builder $query
-     * @param Vinelab\NeoEloquent\Eloquent\Model   $parent
+     * @param Megachill\NeoEloquent\Eloquent\Builder $query
+     * @param Megachill\NeoEloquent\Eloquent\Model   $parent
      * @param string  $type
-     * @param Vinelab\NeoEloquent\Eloquent\Model   $related
+     * @param Megachill\NeoEloquent\Eloquent\Model   $related
      * @param string  $morphType
-     * @param Vinelab\NeoEloquent\Eloquent\Model   $morph
+     * @param Megachill\NeoEloquent\Eloquent\Model   $morph
      */
     public function __construct(Builder $query, Model $parent, $type, Model $related, $morphType, Model $morph, $attributes = array())
     {
@@ -71,7 +73,7 @@ class HyperEdge extends Relation {
      *
      * @return void
      *
-     * @throws  \Vinelab\NeoEloquent\NoEdgeDirectionException If $direction is not set on the inheriting relation.
+     * @throws  \Megachill\NeoEloquent\NoEdgeDirectionException If $direction is not set on the inheriting relation.
      */
     public function initRelation()
     {
@@ -93,7 +95,7 @@ class HyperEdge extends Relation {
     /**
      * Get the left side Edge of this relationship.
      *
-     * @return \Vinelab\NeoEloquent\Eloquent\Edges\EdgeOut
+     * @return \Megachill\NeoEloquent\Eloquent\Edges\EdgeOut
      */
     public function left()
     {
@@ -103,7 +105,7 @@ class HyperEdge extends Relation {
     /**
      * Set the left side Edge of this relation.
      *
-     * @param \Vinelab\NeoEloquent\Eloquent\Edges\Relation $left
+     * @param \Megachill\NeoEloquent\Eloquent\Edges\Relation $left
      * @return  void
      */
     public function setLeft($left)
@@ -114,7 +116,7 @@ class HyperEdge extends Relation {
     /**
      * Get the right side Edge of this relationship.
      *
-     * @return \Vinelab\NeoEloquent\Eloquent\Edges\EdgeOut
+     * @return \Megachill\NeoEloquent\Eloquent\Edges\EdgeOut
      */
     public function right()
     {
@@ -124,7 +126,7 @@ class HyperEdge extends Relation {
     /**
      * Set the right side Edge of this relationship.
      *
-     * @param \Vinelab\NeoEloquent\Eloquent\Edges\Relation $right
+     * @param \Megachill\NeoEloquent\Eloquent\Edges\Relation $right
      * @return void
      */
     public function setRight($right)
@@ -135,7 +137,7 @@ class HyperEdge extends Relation {
     /**
      * Get the hyper model of the relationship.
      *
-     * @return \Vinelab\NeoEloquent\Eloquent\Model
+     * @return \Megachill\NeoEloquent\Eloquent\Model
      */
     public function hyper()
     {

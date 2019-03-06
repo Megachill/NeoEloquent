@@ -1,4 +1,6 @@
-<?php namespace Vinelab\NeoEloquent\Eloquent\Edges;
+<?php 
+
+namespace Megachill\NeoEloquent\Eloquent\Edges;
 
 class EdgeOut extends Relation {
 

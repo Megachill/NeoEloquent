@@ -1,5 +1,5 @@
 {
-    "name": "vinelab/neoeloquent",
+    "name": "megachill/neoeloquent",
     "description": "Laravel wrapper for the Neo4j graph database REST interface",
     "keywords": [
         "laravel",
@@ -11,17 +11,17 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Abed Halawi",
-            "email": "abed.halawi@vinelab.com"
+            "name": "Rico Bartoschak",
+            "email": "rico.bartoschak@gmail.com"
         }
     ],
     "require": {
-        "php": ">=7.1.3",
-        "illuminate/support": "5.6.*",
-        "illuminate/database": "5.6.*",
-        "illuminate/pagination": "5.6.*",
-        "illuminate/events": "5.6.*",
-        "illuminate/console": "5.6.*",
+        "php": ">=7.3.1",
+        "illuminate/support": "5.7.*",
+        "illuminate/database": "5.7.*",
+        "illuminate/pagination": "5.7.*",
+        "illuminate/events": "5.7.*",
+        "illuminate/console": "5.7.*",
         "heydavid713/neo4jphp": "0.1.*",
         "nesbot/carbon": "~1.0"
     },
@@ -33,7 +33,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Vinelab\\NeoEloquent\\": "src"
+            "Megachill\\NeoEloquent\\": "src"
         }
     },
     "autoload-dev": {
@@ -45,7 +45,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Vinelab\\NeoEloquent\\NeoEloquentServiceProvider"
+                "Megachill\\NeoEloquent\\NeoEloquentServiceProvider"
             ]
         }
     }

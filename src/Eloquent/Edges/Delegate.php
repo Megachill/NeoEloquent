@@ -1,24 +1,26 @@
-<?php namespace Vinelab\NeoEloquent\Eloquent\Edges;
+<?php 
 
-use Vinelab\NeoEloquent\Connection;
-use Vinelab\NeoEloquent\Eloquent\Model;
-use Vinelab\NeoEloquent\QueryException;
-use Vinelab\NeoEloquent\Eloquent\Builder;
-use Vinelab\NeoEloquent\UnknownDirectionException;
+namespace Megachill\NeoEloquent\Eloquent\Edges;
+
+use Megachill\NeoEloquent\Connection;
+use Megachill\NeoEloquent\Eloquent\Model;
+use Megachill\NeoEloquent\QueryException;
+use Megachill\NeoEloquent\Eloquent\Builder;
+use Megachill\NeoEloquent\UnknownDirectionException;
 
 abstract class Delegate {
 
      /**
      * The Eloquent builder instance.
      *
-     * @var \Vinelab\NeoEloquent\Eloquent\Builder
+     * @var \Megachill\NeoEloquent\Eloquent\Builder
      */
     protected $query;
 
     /**
      * The database connection.
      *
-     * @var \Vinelab\NeoEloquent\Connection
+     * @var \Megachill\NeoEloquent\Connection
      */
     protected $connection;
 
@@ -32,8 +34,8 @@ abstract class Delegate {
     /**
      * Create a new delegate instance.
      *
-     * @param \Vinelab\NeoEloquent\Eloquent\Builder $query
-     * @param \Vinelab\NeoEloquent\Eloquent\Model   $parent
+     * @param \Megachill\NeoEloquent\Eloquent\Builder $query
+     * @param \Megachill\NeoEloquent\Eloquent\Model   $parent
      */
     public function __construct(Builder $query)
     {
@@ -48,7 +50,7 @@ abstract class Delegate {
     /**
      * Get a new Finder instance.
      *
-     * @return \Vinelab\NeoEloquent\Eloquent\Edges\Finder
+     * @return \Megachill\NeoEloquent\Eloquent\Edges\Finder
      */
     public function newFinder()
     {
@@ -59,8 +61,8 @@ abstract class Delegate {
      * Make a new Relationship instance.
      *
      * @param  string $type
-     * @param  \Vinelab\NeoEloquent\Eloquent\Model $startModel
-     * @param  \Vinelab\NeoEloquent\Eloquent\Model $endModel
+     * @param  \Megachill\NeoEloquent\Eloquent\Model $startModel
+     * @param  \Megachill\NeoEloquent\Eloquent\Model $endModel
      * @param  array  $properties
      * @return \Everyman\Neo4j\Relationship
      */
@@ -89,7 +91,7 @@ abstract class Delegate {
      *
      * @return boolean
      *
-     * @throws  \Vinelab\NeoEloquent\QueryException If no open batch to commit.
+     * @throws  \Megachill\NeoEloquent\QueryException If no open batch to commit.
      */
     public function commitBatch()
     {
@@ -136,7 +138,7 @@ abstract class Delegate {
     /**
      * Convert a model to a Node object.
      *
-     * @param  \Vinelab\NeoEloquent\Eloquent\Model $model
+     * @param  \Megachill\NeoEloquent\Eloquent\Model $model
      * @return \Everyman\Neo4j\Node
      */
     public function asNode(Model $model)
@@ -163,7 +165,7 @@ abstract class Delegate {
     /**
      * Get the NeoEloquent connection for this relation.
      *
-     * @return \Vinelab\NeoEloquent\Connection
+     * @return \Megachill\NeoEloquent\Connection
      */
     public function getConnection()
     {
@@ -173,7 +175,7 @@ abstract class Delegate {
     /**
      * Set the database connection.
      *
-     * @param  \Vinelab\NeoEloquent\Connection  $name
+     * @param  \Megachill\NeoEloquent\Connection  $name
      * @return void
      */
     public function setConnection(Connection $connection)

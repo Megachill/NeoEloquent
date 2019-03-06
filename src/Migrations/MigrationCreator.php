@@ -1,4 +1,6 @@
-<?php namespace Vinelab\NeoEloquent\Migrations;
+<?php 
+
+namespace Megachill\NeoEloquent\Migrations;
 
 use Illuminate\Database\Migrations\MigrationCreator as IlluminateMigrationCreator;
 

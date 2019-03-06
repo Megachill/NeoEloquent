@@ -1,6 +1,6 @@
 <?php
 
-namespace Vinelab\NeoEloquent\Eloquent\Concerns;
+namespace Megachill\NeoEloquent\Eloquent\Concerns;
 
 use Illuminate\Database\Eloquent\Concerns\QueriesRelationships as QR;
 /**

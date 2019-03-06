@@ -1,13 +1,15 @@
-<?php namespace Vinelab\NeoEloquent\Query;
+<?php 
+
+namespace Megachill\NeoEloquent\Query;
 
 use Closure;
 use DateTime;
 use Carbon\Carbon;
-use Vinelab\NeoEloquent\Connection;
+use Megachill\NeoEloquent\Connection;
 use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Eloquent\Collection;
-use Vinelab\NeoEloquent\Query\Grammars\Grammar;
-use Vinelab\NeoEloquent\Query\Processors\Processor;
+use Megachill\NeoEloquent\Query\Grammars\Grammar;
+use Megachill\NeoEloquent\Query\Processors\Processor;
 use Illuminate\Database\Query\Processors\Processor as IlluminateProcessor;
 use Illuminate\Database\Query\Builder as IlluminateQueryBuilder;
 
@@ -16,7 +18,7 @@ class Builder extends IlluminateQueryBuilder {
     /**
      * The database connection instance
      *
-     * @var Vinelab\NeoEloquent\Connection
+     * @var Megachill\NeoEloquent\Connection
      */
     public $connection;
 
@@ -73,7 +75,7 @@ class Builder extends IlluminateQueryBuilder {
     /**
      * Create a new query builder instance.
      *
-     * @param Vinelab\NeoEloquent\Connection $connection
+     * @param Megachill\NeoEloquent\Connection $connection
      * @param  \Illuminate\Database\Query\Grammars\Grammar  $grammar
      * @param  \Illuminate\Database\Query\Processors\Processor  $processor
      * @return void
@@ -93,7 +95,7 @@ class Builder extends IlluminateQueryBuilder {
 	 * Set the node's label which the query is targeting.
 	 *
 	 * @param  string  $label
-	 * @return \Vinelab\NeoEloquent\Query\Builder|static
+	 * @return \Megachill\NeoEloquent\Query\Builder|static
 	 */
     public function from($label)
     {
@@ -493,7 +495,7 @@ class Builder extends IlluminateQueryBuilder {
      * Add a WITH clause to the query.
      *
      * @param  array  $parts
-     * @return \Vinelab\NeoEloquent\Query\Builder|static
+     * @return \Megachill\NeoEloquent\Query\Builder|static
      */
     public function with(array $parts)
     {
@@ -558,7 +560,7 @@ class Builder extends IlluminateQueryBuilder {
      *
      * @param  array  $model
      * @param  array  $related
-     * @return \Vinelab\NeoEloquent\Eloquent\Model
+     * @return \Megachill\NeoEloquent\Eloquent\Model
      */
     public function createWith(array $model, array $related)
     {
@@ -604,14 +606,14 @@ class Builder extends IlluminateQueryBuilder {
     /**
      * Add a relationship MATCH clause to the query.
      *
-     * @param  \Vinelab\NeoEloquent\Eloquent\Model $parent       The parent model of the relationship
-     * @param  \Vinelab\NeoEloquent\Eloquent\Model $related      The related model
+     * @param  \Megachill\NeoEloquent\Eloquent\Model $parent       The parent model of the relationship
+     * @param  \Megachill\NeoEloquent\Eloquent\Model $related      The related model
      * @param  string $relatedNode  The related node' placeholder
      * @param  string $relationship The relationship title
      * @param  string $property     The parent's property we are matching against
      * @param  string $value
      * @param  string $direction Possible values are in, out and in-out
-     * @return \Vinelab\NeoEloquent\Query\Builder|static
+     * @return \Megachill\NeoEloquent\Query\Builder|static
      */
     public function matchRelation($parent, $related, $relatedNode, $relationship, $property, $value = null, $direction = 'out')
     {

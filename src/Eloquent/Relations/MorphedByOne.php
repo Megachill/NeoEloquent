@@ -1,6 +1,8 @@
-<?php namespace Vinelab\NeoEloquent\Eloquent\Relations;
+<?php 
 
-use Vinelab\NeoEloquent\Eloquent\Edges\EdgeOut;
+namespace Megachill\NeoEloquent\Eloquent\Relations;
+
+use Megachill\NeoEloquent\Eloquent\Edges\EdgeOut;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 
 class MorphedByOne extends OneRelation {
@@ -90,7 +92,7 @@ class MorphedByOne extends OneRelation {
      *
      * @param  \Illuminate\Database\Eloquent\Model $model
      * @param  array         $attributes
-     * @return \Vinelab\NeoEloquent\Eloquent\Edges\EdgeOut
+     * @return \Megachill\NeoEloquent\Eloquent\Edges\EdgeOut
      */
     public function getEdge(EloquentModel $model = null, $attributes = array())
     {

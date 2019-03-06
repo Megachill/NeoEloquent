@@ -1,19 +1,21 @@
-<?php namespace Vinelab\NeoEloquent\Eloquent\Edges;
+<?php 
+
+namespace Megachill\NeoEloquent\Eloquent\Edges;
 
 use DateTime;
 use Carbon\Carbon;
 use Everyman\Neo4j\Relationship;
 use Illuminate\Database\Eloquent\Collection;
-use Vinelab\NeoEloquent\Eloquent\Model;
-use Vinelab\NeoEloquent\Eloquent\Builder;
-use Vinelab\NeoEloquent\NoEdgeDirectionException;
+use Megachill\NeoEloquent\Eloquent\Model;
+use Megachill\NeoEloquent\Eloquent\Builder;
+use Megachill\NeoEloquent\NoEdgeDirectionException;
 
 abstract class Relation extends Delegate {
 
     /**
      * The edges finder instance.
      *
-     * @var \Vinelab\NeoEloquent\Eloquent\Edges\Finder
+     * @var \Megachill\NeoEloquent\Eloquent\Edges\Finder
      */
     protected $finder;
 
@@ -33,14 +35,14 @@ abstract class Relation extends Delegate {
     /**
      * The left side Model of the relationship.
      *
-     * @var \Vinelab\NeoEloquent\Eloquent\Model
+     * @var \Megachill\NeoEloquent\Eloquent\Model
      */
     protected $parent;
 
     /**
      * The right side Model of the relationship.
      *
-     * @var \Vinelab\NeoEloquent\Eloquent\Model
+     * @var \Megachill\NeoEloquent\Eloquent\Model
      */
     protected $related;
 
@@ -120,9 +122,9 @@ abstract class Relation extends Delegate {
     /**
      * Create a new Relation instance.
      *
-     * @param \Vinelab\NeoEloquent\Eloquent\Builder $query
-     * @param \Vinelab\NeoEloquent\Eloquent\Model   $parent
-     * @param \Vinelab\NeoEloquent\Eloquent\Model   $related
+     * @param \Megachill\NeoEloquent\Eloquent\Builder $query
+     * @param \Megachill\NeoEloquent\Eloquent\Model   $parent
+     * @param \Megachill\NeoEloquent\Eloquent\Model   $related
      * @param string  $type
      */
     public function __construct(Builder $query, Model $parent, Model $related, $type, $attributes = array(), $unique = false)
@@ -143,7 +145,7 @@ abstract class Relation extends Delegate {
      * Initialize the relationship setting the start node,
      * end node and relation type.
      *
-     * @throws  \Vinelab\NeoEloquent\NoEdgeDirectionException If $direction is not set on the inheriting relation.
+     * @throws  \Megachill\NeoEloquent\NoEdgeDirectionException If $direction is not set on the inheriting relation.
      * @return void
      */
     public function initRelation()
@@ -176,7 +178,7 @@ abstract class Relation extends Delegate {
      * Get the direct relationship between
      * the currently set models ($parent and $related).
      *
-     * @return \Vinelab\NeoEloquent\Eloquent\Edge[In|Out]
+     * @return \Megachill\NeoEloquent\Eloquent\Edge[In|Out]
      */
     public function current()
     {
@@ -331,7 +333,7 @@ abstract class Relation extends Delegate {
      * Fill the model with an array of attributes.
      *
      * @param  array  $attributes
-     * @return \Vinelab\NeoEloquent\Eloquent\Edges\Edge[In|Out]|static
+     * @return \Megachill\NeoEloquent\Eloquent\Edges\Edge[In|Out]|static
      */
     public function fill(array $properties)
     {
@@ -430,7 +432,7 @@ abstract class Relation extends Delegate {
      * Just a convenient method to get
      * the parent model of this relation.
      *
-     * @return \Vinelab\NeoEloquent\Eloquent\Model
+     * @return \Megachill\NeoEloquent\Eloquent\Model
      */
     public function parent()
     {
@@ -440,7 +442,7 @@ abstract class Relation extends Delegate {
     /**
      * Get the parent model of this relation.
      *
-     * @return \Vinelab\NeoEloquent\Eloquent\Model
+     * @return \Megachill\NeoEloquent\Eloquent\Model
      */
     public function getParent()
     {
@@ -451,7 +453,7 @@ abstract class Relation extends Delegate {
      * Just a convenient function to get
      * the related Model of this relation.
      *
-     * @return \Vinelab\NeoEloquent\Eloquent\Model
+     * @return \Megachill\NeoEloquent\Eloquent\Model
      */
     public function related()
     {
@@ -461,7 +463,7 @@ abstract class Relation extends Delegate {
     /**
      * Get the parent model of this relation.
      *
-     * @return \Vinelab\NeoEloquent\Eloquent\Model
+     * @return \Megachill\NeoEloquent\Eloquent\Model
      */
     public function getRelated()
     {

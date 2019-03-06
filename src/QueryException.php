@@ -1,4 +1,6 @@
-<?php namespace Vinelab\NeoEloquent;
+<?php 
+
+namespace Megachill\NeoEloquent;
 
 use Everyman\Neo4j\Exception as Neo4jException;
 

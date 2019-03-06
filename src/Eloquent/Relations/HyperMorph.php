@@ -1,8 +1,10 @@
-<?php namespace Vinelab\NeoEloquent\Eloquent\Relations;
+<?php 
 
-use Vinelab\NeoEloquent\Eloquent\Model;
-use Vinelab\NeoEloquent\Eloquent\Builder;
-use Vinelab\NeoEloquent\Eloquent\Edges\HyperEdge;
+namespace Megachill\NeoEloquent\Eloquent\Relations;
+
+use Megachill\NeoEloquent\Eloquent\Model;
+use Megachill\NeoEloquent\Eloquent\Builder;
+use Megachill\NeoEloquent\Eloquent\Edges\HyperEdge;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 
 class HyperMorph extends BelongsToMany {
@@ -11,7 +13,7 @@ class HyperMorph extends BelongsToMany {
      * The morph Model instance
      * representing the 3rd Node of the relationship.
      *
-     * @var \Vinelab\NeoEloquent\Eloquent\Model
+     * @var \Megachill\NeoEloquent\Eloquent\Model
      */
     protected $morph;
 
@@ -33,9 +35,9 @@ class HyperMorph extends BelongsToMany {
     /**
      * Create a new HyperMorph relationship.
      *
-     * @param \Vinelab\NeoEloquent\Eloquent\Builder $query
-     * @param Vinelab\NeoEloquent\Eloquent\Model   $parent
-     * @param Vinelab\NeoEloquent\Eloquent\Model   $morph
+     * @param \Megachill\NeoEloquent\Eloquent\Builder $query
+     * @param Megachill\NeoEloquent\Eloquent\Model   $parent
+     * @param Megachill\NeoEloquent\Eloquent\Model   $morph
      * @param string  $type
      * @param string  $morphType
      * @param string  $key

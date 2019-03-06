@@ -1,16 +1,18 @@
-<?php namespace Vinelab\NeoEloquent;
+<?php 
+
+namespace Megachill\NeoEloquent;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Migrations\Migrator;
-use Vinelab\NeoEloquent\Console\Migrations\MigrateStatusCommand;
-use Vinelab\NeoEloquent\Migrations\MigrationModel;
-use Vinelab\NeoEloquent\Migrations\MigrationCreator;
-use Vinelab\NeoEloquent\Console\Migrations\MigrateCommand;
-use Vinelab\NeoEloquent\Console\Migrations\MigrateMakeCommand;
-use Vinelab\NeoEloquent\Console\Migrations\MigrateResetCommand;
-use Vinelab\NeoEloquent\Migrations\DatabaseMigrationRepository;
-use Vinelab\NeoEloquent\Console\Migrations\MigrateRefreshCommand;
-use Vinelab\NeoEloquent\Console\Migrations\MigrateRollbackCommand;
+use Megachill\NeoEloquent\Console\Migrations\MigrateStatusCommand;
+use Megachill\NeoEloquent\Migrations\MigrationModel;
+use Megachill\NeoEloquent\Migrations\MigrationCreator;
+use Megachill\NeoEloquent\Console\Migrations\MigrateCommand;
+use Megachill\NeoEloquent\Console\Migrations\MigrateMakeCommand;
+use Megachill\NeoEloquent\Console\Migrations\MigrateResetCommand;
+use Megachill\NeoEloquent\Migrations\DatabaseMigrationRepository;
+use Megachill\NeoEloquent\Console\Migrations\MigrateRefreshCommand;
+use Megachill\NeoEloquent\Console\Migrations\MigrateRollbackCommand;
 
 class MigrationServiceProvider extends ServiceProvider {
 

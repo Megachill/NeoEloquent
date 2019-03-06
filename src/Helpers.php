@@ -1,4 +1,6 @@
-<?php namespace Vinelab\NeoEloquent;
+<?php 
+
+namespace Megachill\NeoEloquent;
 
 class Helpers {
 

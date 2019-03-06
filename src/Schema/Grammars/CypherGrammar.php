@@ -1,8 +1,8 @@
 <?php
-namespace Vinelab\NeoEloquent\Schema\Grammars;
+namespace Megachill\NeoEloquent\Schema\Grammars;
 
 use Illuminate\Support\Fluent;
-use Vinelab\NeoEloquent\Schema\Blueprint;
+use Megachill\NeoEloquent\Schema\Blueprint;
 
 class CypherGrammar extends Grammar
 {

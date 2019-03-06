@@ -1,6 +1,6 @@
 <?php
 
-namespace Vinelab\NeoEloquent\Console\Migrations;
+namespace Megachill\NeoEloquent\Console\Migrations;
 
 use Illuminate\Support\Collection;
 use Illuminate\Database\Migrations\Migrator;

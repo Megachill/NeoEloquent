@@ -1,6 +1,8 @@
-<?php namespace Vinelab\NeoEloquent\Migrations;
+<?php 
 
-use Vinelab\NeoEloquent\Eloquent\Model as NeoEloquent;
+namespace Megachill\NeoEloquent\Migrations;
+
+use Megachill\NeoEloquent\Eloquent\Model as NeoEloquent;
 
 class MigrationModel extends NeoEloquent {
 

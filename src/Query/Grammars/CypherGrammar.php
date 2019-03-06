@@ -1,7 +1,9 @@
-<?php namespace Vinelab\NeoEloquent\Query\Grammars;
+<?php 
+
+namespace Megachill\NeoEloquent\Query\Grammars;
 
 use Illuminate\Database\Query\Builder;
-use Vinelab\NeoEloquent\Exceptions\InvalidCypherGrammarComponentException;
+use Megachill\NeoEloquent\Exceptions\InvalidCypherGrammarComponentException;
 
 class CypherGrammar extends Grammar {
 
@@ -33,7 +35,7 @@ class CypherGrammar extends Grammar {
     /**
      * Compile the components necessary for a select clause.
      *
-     * @param  \Vinelab\NeoEloquent\Query\Builder
+     * @param  \Megachill\NeoEloquent\Query\Builder
      * @param  array|string $specified You may specify a component to compile
      * @return array
      */
@@ -233,7 +235,7 @@ class CypherGrammar extends Grammar {
      * Compile the "from" portion of the query
      * which in cypher represents the nodes we're MATCHing
      *
-     * @param  \Vinelab\NeoEloquent\Query\Builder  $query
+     * @param  \Megachill\NeoEloquent\Query\Builder  $query
      * @param  string  $labels
      * @return string
      */
@@ -264,7 +266,7 @@ class CypherGrammar extends Grammar {
     /**
      * Compile a "where not in" clause.
      *
-     * @param  \Vinelab\NeoEloquent\Query\Builder  $query
+     * @param  \Megachill\NeoEloquent\Query\Builder  $query
      * @param  array  $where
      * @return string
      */
@@ -282,7 +284,7 @@ class CypherGrammar extends Grammar {
         /**
      * Compile the "where" portions of the query.
      *
-     * @param  \Vinelab\NeoEloquent\Query\Builder  $query
+     * @param  \Megachill\NeoEloquent\Query\Builder  $query
      * @return string
      */
     protected function compileWheres(Builder $query)
@@ -331,7 +333,7 @@ class CypherGrammar extends Grammar {
     /**
      * Compiled a WHERE clause with carried identifiers.
      *
-     * @param  \Vinelab\NeoEloquent\Query\Builder $query
+     * @param  \Megachill\NeoEloquent\Query\Builder $query
      * @param  array  $where
      * @return string
      */
@@ -343,7 +345,7 @@ class CypherGrammar extends Grammar {
     /**
      * Compile the "limit" portions of the query.
      *
-     * @param  \Vinelab\NeoEloquent\Query\Builder  $query
+     * @param  \Megachill\NeoEloquent\Query\Builder  $query
      * @param  int  $limit
      * @return string
      */
@@ -355,7 +357,7 @@ class CypherGrammar extends Grammar {
     /**
      * Compile the "SKIP" portions of the query.
      *
-     * @param  \Vinelab\NeoEloquent\Query\Builder  $query
+     * @param  \Megachill\NeoEloquent\Query\Builder  $query
      * @param  int  $offset
      * @return string
      */
@@ -367,7 +369,7 @@ class CypherGrammar extends Grammar {
     /**
      * Compile the "RETURN *" portion of the query.
      *
-     * @param  \Vinelab\NeoEloquent\Query\Builder  $query
+     * @param  \Megachill\NeoEloquent\Query\Builder  $query
      * @param  array  $columns
      * @return string
      */
@@ -397,7 +399,7 @@ class CypherGrammar extends Grammar {
     /**
      * Compile the "order by" portions of the query.
      *
-     * @param  \Vinelab\NeoEloquent\Query\Builder $query
+     * @param  \Megachill\NeoEloquent\Query\Builder $query
      * @param  array  $orders
      * @return string
      */
@@ -411,7 +413,7 @@ class CypherGrammar extends Grammar {
     /**
      * Compile an update statement into SQL.
      *
-     * @param  \Vinelab\NeoEloquent\Query\Builder  $query
+     * @param  \Megachill\NeoEloquent\Query\Builder  $query
      * @param  array  $values
      * @return string
      */
@@ -539,7 +541,7 @@ class CypherGrammar extends Grammar {
     /**
      * Compile a query that creates multiple nodes of multiple model types related all together.
      *
-     * @param  \Vinelab\NeoEloquent\Query\Builder $query
+     * @param  \Megachill\NeoEloquent\Query\Builder $query
      * @param  array  $create
      * @return string
      */
@@ -684,7 +686,7 @@ class CypherGrammar extends Grammar {
     /**
      * Compile an statement to add or drop node labels
      *
-     * @param  \Vinelab\NeoEloquent\Query\Builder  $query
+     * @param  \Megachill\NeoEloquent\Query\Builder  $query
      * @param  array $labels labels as string like :label1:label2 etc
 	 * @param  array $operation type of operation 'add' or 'drop'
      * @return string

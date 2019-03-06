@@ -1,12 +1,14 @@
-<?php namespace Vinelab\NeoEloquent;
+<?php 
+
+namespace Megachill\NeoEloquent;
 
 use Exception;
 use DateTime, Closure;
 use Illuminate\Support\Arr;
 use Everyman\Neo4j\Query\ResultSet;
-use Vinelab\NeoEloquent\Query\Builder;
-use Vinelab\NeoEloquent\QueryException;
-use Vinelab\NeoEloquent\Query\Processors\Processor;
+use Megachill\NeoEloquent\Query\Builder;
+use Megachill\NeoEloquent\QueryException;
+use Megachill\NeoEloquent\Query\Processors\Processor;
 use Everyman\Neo4j\Client as NeoClient;
 use Everyman\Neo4j\Cypher\Query as CypherQuery;
 use Illuminate\Database\Connection as IlluminateConnection;
@@ -327,7 +329,7 @@ class Connection extends IlluminateConnection {
     /**
      * Get the query grammar used by the connection.
      *
-     * @return \Vinelab\NeoEloquent\Query\Grammars\CypherGrammar
+     * @return \Megachill\NeoEloquent\Query\Grammars\CypherGrammar
      */
     public function getQueryGrammar()
     {
@@ -342,7 +344,7 @@ class Connection extends IlluminateConnection {
     /**
      * Get the default query grammar instance.
      *
-     * @return \Vinelab\NeoEloquent\Query\Grammars\CypherGrammar
+     * @return \Megachill\NeoEloquent\Query\Grammars\CypherGrammar
      */
     protected function getDefaultQueryGrammar()
     {
@@ -428,7 +430,7 @@ class Connection extends IlluminateConnection {
      * In neo4j's terminologies this is a node.
      *
      * @param  string  $table
-     * @return \Vinelab\NeoEloquent\Query\Builder
+     * @return \Megachill\NeoEloquent\Query\Builder
      */
     public function table($table)
     {
@@ -508,7 +510,7 @@ class Connection extends IlluminateConnection {
     /**
      * Get a schema builder instance for the connection.
      *
-     * @return \Vinelab\NeoEloquent\Schema\Builder
+     * @return \Megachill\NeoEloquent\Schema\Builder
      */
     public function getSchemaBuilder()
     {

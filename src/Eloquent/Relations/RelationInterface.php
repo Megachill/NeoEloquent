@@ -1,4 +1,6 @@
-<?php namespace Vinelab\NeoEloquent\Eloquent\Relations;
+<?php 
+
+namespace Megachill\NeoEloquent\Eloquent\Relations;
 
 interface RelationInterface {
 

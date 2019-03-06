@@ -1,9 +1,11 @@
-<?php namespace Vinelab\NeoEloquent\Migrations;
+<?php 
+
+namespace Megachill\NeoEloquent\Migrations;
 
 use Illuminate\Database\Migrations\MigrationRepositoryInterface;
 use Illuminate\Database\ConnectionResolverInterface;
-use Vinelab\NeoEloquent\Schema\Builder as SchemaBuilder;
-use Vinelab\NeoEloquent\Eloquent\Model;
+use Megachill\NeoEloquent\Schema\Builder as SchemaBuilder;
+use Megachill\NeoEloquent\Eloquent\Model;
 
 class DatabaseMigrationRepository implements MigrationRepositoryInterface {
 
@@ -17,7 +19,7 @@ class DatabaseMigrationRepository implements MigrationRepositoryInterface {
     /**
      * The migration model.
      *
-     * @var \Vinelab\NeoEloquent\Eloquent\Model
+     * @var \Megachill\NeoEloquent\Eloquent\Model
      */
     protected $model;
 
@@ -31,8 +33,8 @@ class DatabaseMigrationRepository implements MigrationRepositoryInterface {
 
     /**
      * @param  \Illuminate\Database\ConnectionResolverInterface  $resolver
-     * @param  \Vinelab\NeoEloquent\Schema\Builder  $schema
-     * @param  \Vinelab\NeoEloquent\Eloquent\Model  $model
+     * @param  \Megachill\NeoEloquent\Schema\Builder  $schema
+     * @param  \Megachill\NeoEloquent\Eloquent\Model  $model
      * @return void
      */
     public function __construct(ConnectionResolverInterface $resolver, SchemaBuilder $schema, Model $model)
@@ -111,7 +113,7 @@ class DatabaseMigrationRepository implements MigrationRepositoryInterface {
     /**
      * Get a query builder for the migration node (table).
      *
-     * @return \Vinelab\NeoEloquent\Query\Builder
+     * @return \Megachill\NeoEloquent\Query\Builder
      */
     protected function label()
     {
@@ -169,7 +171,7 @@ class DatabaseMigrationRepository implements MigrationRepositoryInterface {
     /**
      * Set migration model.
      *
-     * @param \Vinelab\NeoEloquent\Eloquent\Model  $model
+     * @param \Megachill\NeoEloquent\Eloquent\Model  $model
      */
     public function setMigrationModel(Model $model)
     {
@@ -179,7 +181,7 @@ class DatabaseMigrationRepository implements MigrationRepositoryInterface {
     /**
      * Get migration model.
      *
-     * @return \Vinelab\NeoEloquent\Eloquent\Model
+     * @return \Megachill\NeoEloquent\Eloquent\Model
      */
     public function getMigrationModel()
     {

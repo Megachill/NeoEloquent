@@ -1,7 +1,7 @@
 <?php
 
-use Vinelab\NeoEloquent\Schema\Blueprint;
-use Vinelab\NeoEloquent\Migrations\Migration;
+use Megachill\NeoEloquent\Schema\Blueprint;
+use Megachill\NeoEloquent\Migrations\Migration;
 
 class DummyClass extends Migration {
 

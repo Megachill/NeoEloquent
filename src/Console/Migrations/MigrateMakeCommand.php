@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Vinelab\NeoEloquent\Console\Migrations;
+namespace Megachill\NeoEloquent\Console\Migrations;
 
 use Illuminate\Support\Composer;
-use Vinelab\NeoEloquent\Migrations\MigrationCreator;
+use Megachill\NeoEloquent\Migrations\MigrationCreator;
 
 class MigrateMakeCommand extends BaseCommand
 {
@@ -36,7 +36,7 @@ class MigrateMakeCommand extends BaseCommand
     protected $composer;
 
     /**
-     * @param  \Vinelab\NeoEloquent\Migrations\MigrationCreator  $creator
+     * @param  \Megachill\NeoEloquent\Migrations\MigrationCreator  $creator
      * @param  \Illuminate\Support\Composer  $composer
      * @return void
      */

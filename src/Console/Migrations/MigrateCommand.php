@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Vinelab\NeoEloquent\Console\Migrations;
+namespace Megachill\NeoEloquent\Console\Migrations;
 
 use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Database\Migrations\Migrator;

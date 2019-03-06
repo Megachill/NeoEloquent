@@ -1,4 +1,6 @@
-<?php namespace Vinelab\NeoEloquent\Schema\Grammars;
+<?php 
+
+namespace Megachill\NeoEloquent\Schema\Grammars;
 
 use Illuminate\Database\Schema\Grammars\Grammar as IlluminateSchemaGrammar;
 

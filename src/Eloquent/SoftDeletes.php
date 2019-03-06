@@ -1,4 +1,6 @@
-<?php namespace Vinelab\NeoEloquent\Eloquent;
+<?php 
+
+namespace Megachill\NeoEloquent\Eloquent;
 
 use Illuminate\Database\Eloquent\SoftDeletes as IlluminateSoftDeletes;
 

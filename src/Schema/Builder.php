@@ -1,4 +1,6 @@
-<?php namespace Vinelab\NeoEloquent\Schema;
+<?php 
+
+namespace Megachill\NeoEloquent\Schema;
 
 use Closure;
 use Illuminate\Database\ConnectionInterface;
@@ -55,7 +57,7 @@ you can do so by passing additional arguments to default migration command like:
      *
      * @param  string   $label
      * @param  Closure  $callback
-     * @return \Vinelab\NeoEloquent\Schema\Blueprint
+     * @return \Megachill\NeoEloquent\Schema\Blueprint
      */
     public function label($label, Closure $callback)
     {
@@ -68,7 +70,7 @@ you can do so by passing additional arguments to default migration command like:
      * Drop a label from the schema.
      *
      * @param  string  $label
-     * @return \Vinelab\NeoEloquent\Schema\Blueprint
+     * @return \Megachill\NeoEloquent\Schema\Blueprint
      */
     public function drop($label)
     {
@@ -83,7 +85,7 @@ you can do so by passing additional arguments to default migration command like:
      * Drop a label from the schema if it exists.
      *
      * @param  string  $label
-     * @return \Vinelab\NeoEloquent\Schema\Blueprint
+     * @return \Megachill\NeoEloquent\Schema\Blueprint
      */
     public function dropIfExists($label)
     {
@@ -125,7 +127,7 @@ you can do so by passing additional arguments to default migration command like:
      *
      * @param  string  $from
      * @param  string  $to
-     * @return \Vinelab\NeoEloquent\Schema\Blueprint|boolean
+     * @return \Megachill\NeoEloquent\Schema\Blueprint|boolean
      */
     public function renameLabel($from, $to)
     {
@@ -156,7 +158,7 @@ you can do so by passing additional arguments to default migration command like:
      *
      * @param  string   $label
      * @param  Closure  $callback
-     * @return \Vinelab\NeoEloquent\Schema\Blueprint
+     * @return \Megachill\NeoEloquent\Schema\Blueprint
      */
     protected function createBlueprint($label, Closure $callback = null)
     {
@@ -174,7 +176,7 @@ you can do so by passing additional arguments to default migration command like:
      * Set the database connection instance.
      *
      * @param  \Illuminate\Database\ConnectionResolverInterface
-     * @return \Vinelab\NeoEloquent\Schema\Builder
+     * @return \Megachill\NeoEloquent\Schema\Builder
      */
     public function setConnection(ConnectionInterface $connection)
     {

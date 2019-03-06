@@ -1,16 +1,18 @@
-<?php namespace Vinelab\NeoEloquent\Eloquent;
+<?php 
+
+namespace Megachill\NeoEloquent\Eloquent;
 
 use Closure;
 use Everyman\Neo4j\Node;
 use Everyman\Neo4j\Query\Row;
-use Vinelab\NeoEloquent\Helpers;
+use Megachill\NeoEloquent\Helpers;
 use Everyman\Neo4j\Query\ResultSet;
-use Vinelab\NeoEloquent\Eloquent\Model;
-use Vinelab\NeoEloquent\QueryException;
-use Vinelab\NeoEloquent\Eloquent\Relations\HasOne;
-use Vinelab\NeoEloquent\Eloquent\Relations\HasMany;
+use Megachill\NeoEloquent\Eloquent\Model;
+use Megachill\NeoEloquent\QueryException;
+use Megachill\NeoEloquent\Eloquent\Relations\HasOne;
+use Megachill\NeoEloquent\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Collection;
-use Vinelab\NeoEloquent\Eloquent\Relations\OneRelation;
+use Megachill\NeoEloquent\Eloquent\Relations\OneRelation;
 use Illuminate\Database\Eloquent\Builder as IlluminateBuilder;
 use Illuminate\Pagination\Paginator;
 
@@ -62,7 +64,7 @@ class Builder extends IlluminateBuilder {
      *
      * @param  array  $parts Should be associative of the form ['value' => 'identifier']
      *                       and will be mapped to 'WITH value as identifier'
-     * @return \Vinelab\NeoEloquent\Eloquent\Builder|static
+     * @return \Megachill\NeoEloquent\Eloquent\Builder|static
      */
     public function carry(array $parts)
     {
@@ -412,10 +414,10 @@ class Builder extends IlluminateBuilder {
     /**
      * Add an INCOMING "<-" relationship MATCH to the query.
      *
-     * @param  \Vinelab\NeoEloquent\Eloquent\Model $parent       The parent model
-     * @param  \Vinelab\NeoEloquent\Eloquent\Model $related      The related model
+     * @param  \Megachill\NeoEloquent\Eloquent\Model $parent       The parent model
+     * @param  \Megachill\NeoEloquent\Eloquent\Model $related      The related model
      * @param  string                             $relationship
-     * @return \Vinelab\NeoEloquent\Query\Builder|static
+     * @return \Megachill\NeoEloquent\Query\Builder|static
      */
     public function matchIn($parent, $related, $relatedNode, $relationship, $property, $value = null)
     {
@@ -428,10 +430,10 @@ class Builder extends IlluminateBuilder {
     /**
      * Add an OUTGOING "->" relationship MATCH to the query.
      *
-     * @param  \Vinelab\NeoEloquent\Eloquent\Model $parent       The parent model
-     * @param  \Vinelab\NeoEloquent\Eloquent\Model $related      The related model
+     * @param  \Megachill\NeoEloquent\Eloquent\Model $parent       The parent model
+     * @param  \Megachill\NeoEloquent\Eloquent\Model $related      The related model
      * @param  string                             $relationship
-     * @return \Vinelab\NeoEloquent\Eloquent|static
+     * @return \Megachill\NeoEloquent\Eloquent|static
      */
     public function matchOut($parent, $related, $relatedNode, $relationship, $property, $value = null)
     {
@@ -445,11 +447,11 @@ class Builder extends IlluminateBuilder {
      * a morph relationship usually ignores the end node type since it doesn't know
      * what it would be so we'll only set the start node and hope to get it right when we match it.
      *
-     * @param  \Vinelab\NeoEloquent\Eloquent\Model $parent
+     * @param  \Megachill\NeoEloquent\Eloquent\Model $parent
      * @param  string $relatedNode
      * @param  string $property
      * @param  mixed $value
-     * @return \Vinelab\NeoEloquent\Eloquent|static
+     * @return \Megachill\NeoEloquent\Eloquent|static
      */
     public function matchMorphOut($parent, $relatedNode, $property, $value = null)
     {
@@ -487,7 +489,7 @@ class Builder extends IlluminateBuilder {
      * Add a mutation to the query.
      *
      * @param string $holder
-     * @param \Vinelab\NeoEloquent\Eloquent\Model|string  $model String in the case of morphs where we do not know
+     * @param \Megachill\NeoEloquent\Eloquent\Model|string  $model String in the case of morphs where we do not know
      *                                                           the morph model class name
      * @return  void
      */
@@ -503,7 +505,7 @@ class Builder extends IlluminateBuilder {
      * Add a mutation of the type 'many' to the query.
      *
      * @param string $holder
-     * @param \Vinelab\NeoEloquent\Eloquent\Model  $model
+     * @param \Megachill\NeoEloquent\Eloquent\Model  $model
      */
     public function addManyMutation($holder, Model $model)
     {
@@ -563,7 +565,7 @@ class Builder extends IlluminateBuilder {
      * Get the mutation model.
      *
      * @param  string $mutation
-     * @return \Vinelab\NeoEloquent\Eloquent\Model
+     * @return \Megachill\NeoEloquent\Eloquent\Model
      */
     public function getMutationModel($mutation)
     {
@@ -646,7 +648,7 @@ class Builder extends IlluminateBuilder {
      *
      * @param  array  $attributes
      * @param  array  $relations
-     * @return \Vinelab\NeoEloquent\Eloquent\Model
+     * @return \Megachill\NeoEloquent\Eloquent\Model
      */
     public function createWith(array $attributes, array $relations)
     {
@@ -772,7 +774,7 @@ class Builder extends IlluminateBuilder {
     /**
      * Prefix query bindings and wheres with the relation's model Node placeholder.
      *
-     * @param  \Vinelab\NeoEloquent\Eloquent\Builder $query
+     * @param  \Megachill\NeoEloquent\Eloquent\Builder $query
      * @param  string  $prefix
      * @return void
      */
@@ -784,7 +786,7 @@ class Builder extends IlluminateBuilder {
 
     /**
      * Prefix where clauses' columns.
-     * @param  \Vinelab\NeoEloquent\Eloquent\Builder $query
+     * @param  \Megachill\NeoEloquent\Eloquent\Builder $query
      * @param  string  $prefix
      * @return void
      */
@@ -815,7 +817,7 @@ class Builder extends IlluminateBuilder {
     /**
      * Get the match[In|Out] method name out of a relation.
      *
-     * @param  \Vinelab\NeoEloquent\Eloquent\Relations\* $relation
+     * @param  \Megachill\NeoEloquent\Eloquent\Relations\* $relation
      * @return [type]
      */
     protected function getMatchMethodName($relation)

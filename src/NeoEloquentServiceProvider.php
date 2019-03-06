@@ -1,8 +1,8 @@
-<?php namespace Vinelab\NeoEloquent;
+<?php namespace Megachill\NeoEloquent;
 
-use Vinelab\NeoEloquent\Eloquent\Model;
+use Megachill\NeoEloquent\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
-use Vinelab\NeoEloquent\Schema\Grammars\CypherGrammar;
+use Megachill\NeoEloquent\Schema\Grammars\CypherGrammar;
 
 class NeoEloquentServiceProvider extends ServiceProvider {
 

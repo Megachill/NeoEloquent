@@ -1,6 +1,6 @@
 <?php
 
-namespace Vinelab\NeoEloquent\Query\Processors;
+namespace Megachill\NeoEloquent\Query\Processors;
 
 use \Illuminate\Database\Query\Processors\Processor as IlluminateProcessor;
 use \Illuminate\Database\Query\Builder as IlluminateBuilder;

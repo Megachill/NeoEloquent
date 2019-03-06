@@ -1,8 +1,10 @@
-<?php namespace Vinelab\NeoEloquent\Eloquent\Relations;
+<?php 
 
-use Vinelab\NeoEloquent\Eloquent\Model;
+namespace Megachill\NeoEloquent\Eloquent\Relations;
+
+use Megachill\NeoEloquent\Eloquent\Model;
 use Illuminate\Database\Eloquent\Collection;
-use Vinelab\NeoEloquent\Eloquent\Edges\EdgeOut;
+use Megachill\NeoEloquent\Eloquent\Edges\EdgeOut;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 
 class HasOne extends HasOneOrMany {
@@ -113,7 +115,7 @@ class HasOne extends HasOneOrMany {
      *
      * @param  \Illuminate\Database\Eloquent\Model $model
      * @param  array         $attributes
-     * @return \Vinelab\NeoEloquent\Eloquent\Edges\EdgeOut
+     * @return \Megachill\NeoEloquent\Eloquent\Edges\EdgeOut
      */
     public function getEdge(EloquentModel $model = null, $attributes = array())
     {
@@ -129,7 +131,7 @@ class HasOne extends HasOneOrMany {
      * the related model determined by the relation function name.
      *
      * @param  \Illuminate\Database\Eloquent\Model $model
-     * @return \Vinelab\NeoEloquent\Eloquent\Edges\Edge[In,Out, etc.]
+     * @return \Megachill\NeoEloquent\Eloquent\Edges\Edge[In,Out, etc.]
      */
     public function edge(Model $model = null)
     {

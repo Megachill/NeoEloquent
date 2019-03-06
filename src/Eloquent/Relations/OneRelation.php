@@ -1,4 +1,6 @@
-<?php namespace Vinelab\NeoEloquent\Eloquent\Relations;
+<?php 
+
+namespace Megachill\NeoEloquent\Eloquent\Relations;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Collection;
@@ -40,7 +42,7 @@ abstract class OneRelation extends BelongsTo implements RelationInterface {
      *
      * @param  \Illuminate\Database\Eloquent\Model $model
      * @param  array         $attributes
-     * @return \Vinelab\NeoEloquent\Eloquent\Edges\Edge[In,Out, etc.]
+     * @return \Megachill\NeoEloquent\Eloquent\Edges\Edge[In,Out, etc.]
      */
     abstract function getEdge(Model $model = null, $attributes = array());
 
@@ -58,7 +60,7 @@ abstract class OneRelation extends BelongsTo implements RelationInterface {
      * Associate the model instance to the given parent.
      *
      * @param  \Illuminate\Database\Eloquent\Model  $model
-     * @return \Vinelab\NeoEloquent\Eloquent\Edges\Relation
+     * @return \Megachill\NeoEloquent\Eloquent\Edges\Relation
      */
     public function associate($model, $attributes = array())
     {
@@ -104,7 +106,7 @@ abstract class OneRelation extends BelongsTo implements RelationInterface {
      * the related model determined by the relation function name.
      *
      * @param  \Illuminate\Database\Eloquent\Model $model
-     * @return \Vinelab\NeoEloquent\Eloquent\Edges\Edge[In,Out, etc.]
+     * @return \Megachill\NeoEloquent\Eloquent\Edges\Edge[In,Out, etc.]
      */
     public function edge(Model $model = null)
     {

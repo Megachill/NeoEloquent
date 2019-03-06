@@ -1,6 +1,8 @@
-<?php namespace Vinelab\NeoEloquent\Eloquent\Relations;
+<?php 
 
-use Vinelab\NeoEloquent\Eloquent\Edges\EdgeOut;
+namespace Megachill\NeoEloquent\Eloquent\Relations;
+
+use Megachill\NeoEloquent\Eloquent\Edges\EdgeOut;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 
 class MorphMany extends BelongsToMany {
@@ -89,7 +91,7 @@ class MorphMany extends BelongsToMany {
      *
      * @param  \Illuminate\Database\Eloquent\Model $model
      * @param  array         $attributes
-     * @return \Vinelab\NeoEloquent\Eloquent\Edges\Edge[In|Out]
+     * @return \Megachill\NeoEloquent\Eloquent\Edges\Edge[In|Out]
      */
     public function getEdge(EloquentModel $model = null, $attributes = array())
     {

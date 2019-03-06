@@ -1,9 +1,11 @@
-<?php namespace Vinelab\NeoEloquent\Facade;
+<?php 
+
+namespace Megachill\NeoEloquent\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Vinelab\NeoEloquent\Schema\Builder
+ * @see \Megachill\NeoEloquent\Schema\Builder
  */
 class Neo4jSchema extends Facade {
 
@@ -11,7 +13,7 @@ class Neo4jSchema extends Facade {
      * Get a schema builder instance for a connection.
      *
      * @param  string  $name
-     * @return \Vinelab\NeoEloquent\Schema\Builder
+     * @return \Megachill\NeoEloquent\Schema\Builder
      */
     public static function connection($name)
     {

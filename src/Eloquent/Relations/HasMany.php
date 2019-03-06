@@ -1,7 +1,9 @@
-<?php namespace Vinelab\NeoEloquent\Eloquent\Relations;
+<?php 
+
+namespace Megachill\NeoEloquent\Eloquent\Relations;
 
 use Illuminate\Database\Eloquent\Collection;
-use Vinelab\NeoEloquent\Eloquent\Edges\EdgeOut;
+use Megachill\NeoEloquent\Eloquent\Edges\EdgeOut;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 
 class HasMany extends HasOneOrMany {
@@ -21,7 +23,7 @@ class HasMany extends HasOneOrMany {
      *
      * @param  \Illuminate\Database\Eloquent\Model $model
      * @param  array         $attributes
-     * @return \Vinelab\NeoEloquent\Eloquent\Edges\EdgeOut
+     * @return \Megachill\NeoEloquent\Eloquent\Edges\EdgeOut
      */
     public function getEdge(EloquentModel $model = null, $attributes = array())
     {
